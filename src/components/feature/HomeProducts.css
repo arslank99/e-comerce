@@ -1,0 +1,123 @@
+:root {
+  --white: #ffffff;
+  --orange : #eea287;
+  --black : #000;
+  --gray : #666;
+  --darkgrey: #333;
+}
+
+#menu button {
+  border-radius: 0px;
+  padding: 8px 25px;
+}
+
+
+.circle-custom span {
+  background-color: #eea287;
+  color: #fff;
+  border-radius: 25px;
+  padding: 15px 10px;
+  font-weight: 400;
+}
+
+
+
+ .product-cat{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  text-decoration: none;
+}
+
+.product-cat a{
+ text-decoration: none;
+ color: #d2cfcf;
+ font-size: 14px;
+}
+
+.product-cat a:hover{
+ color: var(--orange);
+ transition: 0.6s ease;
+}
+
+.product-title a {
+ text-decoration: none;
+ color: var(--darkgrey);
+ font-size: 18px; 
+ font-weight: 600; 
+}
+
+.product-title a:hover {
+ color: var(--orange);
+ transition: 0.6s ease;
+}
+
+.product-price{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  text-decoration: none;
+}
+
+.product-price .new-price {
+  color: var(--orange);
+  font-weight: 600;
+}
+
+.product-price .old-price {
+  font-weight: 600;
+  text-decoration: line-through;
+}
+
+.ratings-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+.ratings-text{
+    color: #d2cfcf;
+}
+
+
+.box{
+    position: relative;
+}
+
+.box button {
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  right: 0;
+  padding: 8px;
+  text-transform: uppercase;
+  border-radius: 0;
+  height: 50px;
+}
+
+.box button:hover {
+ background-color: #eea287;
+ color: #fff;
+}
+
+.box button::before {
+	font-family: FontAwesome;
+	content:"\f217";
+    font-size: 20px;
+	position: absolute;
+	top: 11px;
+	left: -30px;
+	transition: all 200ms ease;
+}
+
+button:hover::before {
+	left: 47px;
+}
+
+/* Image CArd one  */
+
+
+

@@ -1,0 +1,161 @@
+.about-bg{
+    background-image: url("../images/about-header-bg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 500px;
+    position: relative;
+}
+
+.about-heading{ 
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    text-align: center;
+}
+
+.about-heading p{
+    letter-spacing: 2px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.missons p {
+    margin-bottom: 0;
+    font-size: 1.2rem;
+    font-weight: 300;
+    letter-spacing: 0;
+    color: #777;
+}
+
+.lead {
+    font-size: 1.2rem;
+    font-weight: 400;
+    line-height: 1.875;
+    margin-bottom: 1.2rem;
+    color: #eea287!important;
+}
+
+.title {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+a.btn.btn-outline-primary {
+    border: 1px solid #eea287;
+    border-radius: unset;
+    color: #eea287;
+    padding: 6px 25px;
+}
+
+a.btn.btn-outline-primary:hover {
+    background-color: #eea287;
+    color: white;
+}
+
+.about-images {
+    position: relative;
+    text-align: right;
+    padding-top: 4rem;
+}
+
+.about-img-back{
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+}
+
+.about-img-front{
+    position: absolute;
+    top: 45px;
+    left: 30px;
+    z-index: 2;
+    border: 2rem solid #f9f9f9;
+}
+
+
+.custom-pad{
+    padding: 80px 0px;
+}
+.brand{
+    margin-bottom: 50px;
+}
+
+.text-container{
+    position: relative;
+}
+
+.overlayImage{
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: 0.5s ease;
+}
+
+.text-container:hover .overlayImage{
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: 0.6s ease;
+}
+
+.member-overlay-content h3{
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.member-overlay-content span{
+    font-size: 16px;
+    letter-spacing: 2px;
+    margin-top: 10px;
+}
+
+.member-overlay-content p{
+    font-size: 16px;
+    margin: 20px 0px;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 35px;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.member-overlay-content{
+    margin: 200px auto;
+    text-align: center;
+    width: 60%;
+    color: white;
+   
+}
+
+
+
+.img-div {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+}
+
+
+.slick-slide img {
+    display: block;
+    border-radius: 44px;
+}
+

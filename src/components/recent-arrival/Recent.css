@@ -1,0 +1,17 @@
+#RecentArrival .buttons button{
+ margin-right: 16px;
+ border-radius: 0px;
+ padding: 5px 18px;
+ font-size: 18px;
+}
+#RecentArrival .buttons{
+    margin-top: 10px;
+}
+
+#RecentArrival .viewBtn button {
+ margin-right: 20px;
+ border-radius: 0px;
+ padding: 5px 25px;
+ font-size: 18px;
+}
+

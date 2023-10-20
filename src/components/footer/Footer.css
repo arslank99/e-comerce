@@ -1,0 +1,106 @@
+.footer {
+    color: #777;
+    background-color: #222;
+    margin-top:-6px ;
+}
+
+.widget .footer-logo{
+    width: 100%;
+    max-width: 20%;
+    margin: 30px 0;
+}
+
+.widget-about-title {
+    color: #fff;
+}
+
+.widget-about-info a {
+   text-decoration: none;
+   color: #eea287;
+   font-size:20px;
+   text-transform: capitalize;
+}
+
+
+
+.widget-title{
+    margin: 30px 0px 20px 30px;
+    color: white;
+    text-transform: uppercase;
+    font-size: 15px;
+}
+
+.widget-list li {
+    list-style-type: none;
+}
+
+.widget-list a {
+    text-decoration: none;
+    color: #777;
+    line-height: 2;
+}
+
+
+.widget-list a:hover {
+    color: #eea287;
+    transition: all 0.5s ease;
+}
+
+.fix{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-menu{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer-menu li{
+    list-style-type: none;
+}
+
+.footer-menu a{
+   text-decoration: none;
+   color: #777;
+   border-right: 1px solid #777;
+   padding-right: 15px;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 15px;
+    font-size: 16px;
+    font-weight: 700;
+  
+}
+
+
+.social-icons .facebook{
+    color: #9595d9;
+    cursor: pointer;
+}
+
+.social-icons .twitter{
+    color: skyblue;
+    cursor: pointer;
+}
+
+.social-icons .linkdin{
+    color: #0d6efd;
+    cursor: pointer;
+}
+
+.social-icons .pint{
+    color: red;
+    cursor: pointer;
+}
+
+.social-icons .youtube{
+    color: #d56570;
+    cursor: pointer;
+}

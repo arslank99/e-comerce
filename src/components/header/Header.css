@@ -1,0 +1,139 @@
+:root {
+  --white: #ffffff;
+  --orange : #eea287;
+  --black : #000;
+  --gray : #666;
+  --darkgrey: #333;
+}
+
+#header{
+    background-image: url("../images/slide-1.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    position: relative;
+}
+
+
+ .slick-next::before {
+  font-family: 'slick';
+  font-size: 45px;
+  line-height: 1;
+  opacity: .75;
+  color: white;
+  margin-top: 10px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.slick-prev::before {
+  font-family: 'slick';
+  font-size: 45px;
+  line-height: 1;
+  opacity: .75;
+  color: white;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.banner-text{
+    margin: 150px 0px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+ .banner-text2{
+    margin: 150px 0px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-align: end;
+}
+
+.intro-subtitle{
+   font-size: 20px;
+   color: var(--gray);
+}
+
+.intro-title{
+    font-size: 6rem;
+    font-weight: 800;
+}
+
+.intro-title2{
+    font-size: 6rem;
+    font-weight: 800;
+}
+
+.intro-title strong{
+    font-size: 7rem;
+    color: var(--orange);
+}
+
+@media only screen and (max-width: 850px){
+#dspImg{
+  margin-top: 100px;
+}
+.banner-text {
+    text-align: center;
+}
+.banner-text2{
+   text-align: center;
+}
+
+.intro-title{
+    font-size: 4rem;
+    font-weight: 800;
+}
+
+.intro-title2{
+    font-size: 4rem;
+    font-weight: 800;
+}
+
+.intro-title strong{
+    font-size: 4rem;
+    color: var(--orange);
+}
+
+}
+
+
+@media only screen and (max-width: 768px){
+
+.banner-img{
+  display: none;
+}
+
+}
+
+
+@media only screen and (max-width: 600px){
+.banner-text {
+    text-align: center;
+}
+.banner-text2{
+   text-align: center;
+}
+
+.intro-title{
+    font-size: 3rem;
+    font-weight: 800;
+}
+
+.intro-title2{
+    font-size: 3rem;
+    font-weight: 800;
+}
+
+.intro-title strong{
+    font-size: 4rem;
+    color: var(--orange);
+}
+
+#navbar .container .col-md-6.active{
+    height: 100vh;
+}
+
+}
+   
