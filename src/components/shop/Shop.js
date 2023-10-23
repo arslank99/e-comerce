@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState, useCallback, useEffect } from "react";
 import "./Shop.css";
 import List from "./List";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -18,10 +18,14 @@ import { NavLink } from "react-router-dom";
 import Pagination from "../pagination/Pagination";
 
 const Shop = () => {
-  // data usrParams
-  const queryString = window.location.search;
-  const urlParams = new URLSearchParams(queryString);
-  const body = urlParams.get("body");
+  
+  const [filters, setFilters] = useState({
+    // Define your filter options here
+    category: "",
+    size: "",
+    color: "",
+    // Add more filters as needed
+  });
 
   const [params, setParams] = useSearchParams();
 
@@ -40,12 +44,9 @@ const Shop = () => {
   // Category Filter useEffect
   useEffect(() => {
     const filtered = productsData.filter((product) => {
-      return category
-        ? product.category.some((cat) => cat.name === category)
+      return category ? product.category.some((cat) => cat.name === category)
         : product;
     });
-
-    console.log(filtered.length);
 
     setCategoryData(filtered);
   }, [category]);
@@ -72,6 +73,27 @@ const Shop = () => {
     setCategoryData(colorFilter);
   }, [colors]);
 
+
+  // Color Filter UseEffect
+  useEffect(() => {
+    applyFilters();
+  }, [filters]);
+
+  const applyFilters = () => {
+    // Apply filters to the original data
+    let filteredResults = [...productsData];
+
+    if (filters.category.length > 0) {
+      filteredResults = filteredResults.filter(item =>
+        filters.category.includes(item.category[0].name)
+      );
+    }
+
+
+    // Update the filtered data state
+    setCategoryData(filteredResults);
+  };
+
   // pagination states
   const [currentPage, setCurrentPage] = useState(1);
   const postPerPage = 5;
@@ -97,8 +119,8 @@ const Shop = () => {
           <div className="row">
             <div className="col-md-3">
               <List
-                selectedCategory={selectedCategory}
-                setSelectedCategory={setSelectedCategory}
+              filters={filters} 
+              setFilters={setFilters}
               />
             </div>
             <div className="col-md-9">
@@ -239,7 +261,7 @@ const Shop = () => {
               {activeView === "table" && <Grid3 data={PostData} />}
               {/* Row 4 start */}
 
-              {console.log({ postPerPage, length: categoryData.length })}
+              {/* {console.log({ postPerPage, length: categoryData.length })} */}
 
               {/* Pagination Start Here */}
               <Pagination
