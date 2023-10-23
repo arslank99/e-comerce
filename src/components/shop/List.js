@@ -3,8 +3,20 @@ import "./Shop.css";
 import { size, brand, colors } from "../../ListData";
 import { productsData } from "../../ShopData";
 import { useSearchParams } from "react-router-dom";
-const List = (props) => {
+
+const List = ({ filters, setFilters }) => {
   const [params, setParams] = useState([]);
+
+  const handleFilterChange = (e) => {
+    const { name, value } = e.target;
+    // Check if the value is already in the array
+    if (!(filters[name] || []).includes(value)) {
+      setFilters({
+        ...filters,
+        [name]: [...(filters[name] || []), value],
+      });
+    }
+  };
 
   const addParam = (key, value) => {
     console.log(key, value);
@@ -87,9 +99,9 @@ const List = (props) => {
                         >
                           <input
                             type="checkbox"
-                            name=""
-                            value=""
-                            onClick={() => addParam("category", key)}
+                            name="category"
+                            value={key}
+                            onClick={handleFilterChange}
                           />
                           {key}
                           <span className="item-count"> {value}</span>
@@ -131,7 +143,9 @@ const List = (props) => {
                             className="custom-control-input"
                             name="size"
                             id="size-1"
-                            onClick={() => setParams({ size: size })}
+                            //onClick={() => setParams({ size: size })}
+                            value={size}
+                            onClick={handleFilterChange}
                           />
                           <label
                             className="custom-control-label"
@@ -184,7 +198,9 @@ const List = (props) => {
                             width: "24px",
                             height: "24px",
                           }}
-                          onClick={() => setParams({ color: color })}
+                          name='color'
+                          value={color}
+                            onClick={handleFilterChange}
                         ></button>
                       </div>
                     </>
